@@ -6,6 +6,7 @@ from pkg.plugin.models import *
 from pkg.plugin.host import EventContext, PluginHost
 from plugins.QChatMarkdown.config.config import Config
 
+
 def send_msg(kwargs, msg):
     host: pkg.plugin.host.PluginHost = kwargs['host']
     host.send_person_message(kwargs['launcher_id'], msg) if kwargs[
@@ -17,7 +18,7 @@ config = Config()
 
 
 # 注册插件
-@register(name="QChatMarkdown", description="将内容以Markdown图片形式输出", version="0.1", author="oliverkirk-sudo")
+@register(name="QChatMarkdown", description="将内容以Markdown图片形式输出", version="1.0", author="oliverkirk-sudo")
 class QChatMarkdownPlugin(Plugin):
 
     # 插件加载时触发

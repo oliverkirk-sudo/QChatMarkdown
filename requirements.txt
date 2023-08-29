@@ -1,0 +1,5 @@
+pytest-playwright
+pymdown-extensions
+typing
+jinja2
+markdown
