@@ -1,7 +1,8 @@
 # QChatAIPaint
 
-适用于[QChatGPT]()的markdown文本转图像插件,参考了[nonebot-plugin-htmlrender](https://github.com/kexue-z/nonebot-plugin-htmlrender)的代码
-
+适用于[QChatGPT]()的markdown文本转图像插件,参考了[nonebot-plugin-htmlrender](https://github.com/kexue-z/nonebot-plugin-htmlrender)的代码<br>
+效果如图：
+![pic](./pic/1.png)
 ## 1、前置工作
 
 - 下载本插件`!plugin get https://github.com/oliverkirk-sudo/QChatMarkdown.git`
