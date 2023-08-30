@@ -6,8 +6,9 @@
 
 - 下载本插件`!plugin get https://github.com/oliverkirk-sudo/QChatMarkdown.git`
 
-## 2、修改配置文件
+## 2、配置
 
+- 修改配置文件
 ```python
 class Config:
     def __init__(self):
@@ -20,8 +21,37 @@ class Config:
         self.htmlrender_download_host: Optional[str] = None # 配置源下载地址
         self.htmlrender_proxy_host: Optional[str] = None # 代理设置
 ```
+- 安装依赖
 
-## 3、接口
+### UBUNTU
+```sh
+apt update && apt install -y locales locales-all fonts-noto libnss3-dev libxss1 libasound2 libxrandr2 libatk1.0-0 libgtk-3-0 libgbm-dev libxshmfence1
+```
+
+- 然后设置 ENV local
+
+```sh
+LANG zh_CN.UTF-8
+LANGUAGE zh_CN.UTF-8
+LC_ALL zh_CN.UTF-8
+```
+
+### CentOS
+
+```sh
+dnf install -y alsa-lib at-spi2-atk at-spi2-core atk cairo cups-libs dbus-libs expat flac-libs gdk-pixbuf2 glib2 glibc gtk3 libX11 libXcomposite libXdamage libXext libXfixes libXrandr libXtst libcanberra-gtk3 libdrm libgcc libstdc++ libxcb libxkbcommon libxshmfence libxslt mesa-libgbm nspr nss nss-util pango policycoreutils policycoreutils-python-utils zlib cairo-gobject centos-indexhtml dbus-glib fontconfig freetype gtk2 libXcursor libXi libXrender libXt liberation-fonts-common liberation-sans-fonts libffi mozilla-filesystem p11-kit-trust pipewire-libs harfbuzz-icu libglvnd-glx libglvnd-egl libnotify opus woff2 gstreamer1-plugins-base gstreamer1-plugins-bad-free openjpeg2 libwebp enchant libsecret hyphen libglvnd-gles
+```
+
+## 3、支持
+
+- 使用 `GitHub-light` 样式
+- 支持绝大部分 md 语法
+- 代码高亮
+- latex 数学公式
+  - 使用 `$$...$$` 来输入独立公式
+  - 使用 `$...$` 来输入行内公式
+
+## 4、接口
 
 - 提供了md转图片，html转图片，文本转图片，模板转图片这几个接口供其他插件使用
 ```python
